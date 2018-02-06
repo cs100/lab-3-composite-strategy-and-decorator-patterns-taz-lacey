@@ -1,8 +1,8 @@
 #include <iostream>
 #include "component.h"
-// #include "vector_container.h"
-// #include "list_container.h"
-// #include "strategy.h"
+#include "vector_container.h"
+#include "list_container.h"
+#include "strategy.h"
 
 using namespace std;
 

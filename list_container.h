@@ -2,7 +2,6 @@
 #define __LIST_CONTAINER__
 #include <list>
 #include "strategy.h"
-
 using namespace std;
 
 class list_container : public Container {
