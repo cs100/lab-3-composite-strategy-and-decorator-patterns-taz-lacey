@@ -10,8 +10,9 @@ void list_container::add_element(Base* element) {
 
 void list_container::print() {
     for (list<Base*>::iterator it = list_values.begin(); it != list_values.end(); ++it) {
-        cout << (*it)->evaluate() << ", ";
+        cout << (*it)->evaluate() << " ";
     }
+    cout << endl;
 }
 
 void list_container::sort() {

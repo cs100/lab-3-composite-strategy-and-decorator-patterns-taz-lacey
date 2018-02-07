@@ -11,7 +11,7 @@ class Container;
 class Sort {
     public: 
         /* Constructors */
-        Sort();
+        Sort() { }
 
         /* Pure Virtual Functions */
         virtual void sort(Container* container) = 0;
@@ -28,7 +28,9 @@ class Container {
 
         /* Non Virtual Functions */
         // Set the type of sorting algorithm
-        void set_sort_function(Sort* sort_function); 
+        void set_sort_function(Sort* sort_function) {
+            this->sort_function = sort_function;
+        } 
 
         /* Pure Virtual Functions */
         // insert the top pointer of the tree into the container
@@ -48,5 +50,26 @@ class Container {
         virtual int size() = 0;
 };
 
+class SelectionSort : public Sort {
+    public:
+        void sort(Container* cont) {
+            for (int i = 0; i < cont->size(); ++i) {
+                int min = i;
+                for (int j = i + 1; j < cont->size(); ++j) {
+                    if (cont->at(j)->evaluate() < cont->at(min)->evaluate()) {
+                        min = j;
+                    }
+                }
+                cont->swap(i, min);
+            }
+        }
+};
+
+class bubble : public Sort {
+    public:
+        void sort(Container* cont) {
+            
+        }
+};
 
 #endif // __STRATEGY_H__

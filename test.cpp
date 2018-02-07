@@ -16,15 +16,15 @@ int main() {
     add* C = new add(A, B);
     square* D = new square(C);
 
-    // VectorContainer* container = new VectorContainer();
-    // //ListContainer* container = new ListContainer();
-    // container->add_element(A);
-    // container->add_element(B);
-    // container->add_element(D);
-    // cout << "Container Before Sort: " << endl;
-    // container->print();
-    // container->set_sort_function(new SelectionSort());
-    // container->sort();	
-    // cout << "Container After Sort: " << endl;
-    // container->print();
+    vector_container* container = new vector_container();
+    //list_container* container = new list_container();
+    container->add_element(A);
+    container->add_element(B);
+    container->add_element(D);
+    cout << "Container Before Sort: " << endl;
+    container->print();
+    container->set_sort_function(new SelectionSort());
+    container->sort();	
+    cout << "Container After Sort: " << endl;
+    container->print();
 };
