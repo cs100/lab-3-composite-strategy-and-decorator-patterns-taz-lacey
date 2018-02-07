@@ -65,10 +65,18 @@ class SelectionSort : public Sort {
         }
 };
 
-class bubble : public Sort {
+class BubbleSort : public Sort {
     public:
         void sort(Container* cont) {
-            
+            for (int j = 1; j < cont->size(); ++j) {
+                bool sorted = true;
+                for (int i = 0; i < cont->size() - j; ++i) {
+                    if (cont->at(i)->evaluate() > cont->at(i+1)->evaluate()) {
+                        cont->swap(i, i+1);
+                        sorted = false;
+                    }
+                }
+            }
         }
 };
 
