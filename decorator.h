@@ -51,6 +51,4 @@ class Abs : public Decorator{
     }
 };
 
-
-
 #endif //__DECORATOR_H__

@@ -3,7 +3,6 @@
 #include <list>
 #include "list_container.h"
 
-
 void list_container::add_element(Base* element) {
     list_values.push_back(element);
 }
