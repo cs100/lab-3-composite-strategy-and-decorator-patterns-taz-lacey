@@ -76,6 +76,9 @@ class BubbleSort : public Sort {
                         sorted = false;
                     }
                 }
+                if (sorted == true) {
+                    break;
+                }
             }
         }
 };

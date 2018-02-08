@@ -6,13 +6,15 @@ class Container {
         Sort* sort_function;
 
     public: 
-        /* Cosntructors */
+        /* Constructors */
         Container() : sort_function(NULL) { }
         Container(Sort* function); 
 
         /* Non Virtual Functions */
         // Set the type of sorting algorithm
-        void set_sort_function(Sort* sort_function); 
+        void set_sort_function(Sort* sort_function){
+            this->sort_function = sort_function;
+        }
 
         /* Pure Virtual Functions */
         // insert the top pointer of the tree into the container

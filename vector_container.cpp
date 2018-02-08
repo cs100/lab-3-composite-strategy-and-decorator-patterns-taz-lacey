@@ -14,7 +14,7 @@ void vector_container::print() {
         return;
     }
     
-    for (int x = 0; x < vector_values.size(); ++x) {
+    for (unsigned x = 0; x < vector_values.size(); ++x) {
         cout << vector_values.at(x)->evaluate() << " ";
     }
     cout << endl;

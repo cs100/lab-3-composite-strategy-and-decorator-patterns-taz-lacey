@@ -14,6 +14,7 @@ int main() {
     op* op4 = new op(6);
     op* op5 = new op(5.3);
     op* op6 = new op(6.8);
+    
     multiply* A = new multiply(op1, op2);
     subtract* B = new subtract(op3, op4);
     add* C = new add(A, B);
