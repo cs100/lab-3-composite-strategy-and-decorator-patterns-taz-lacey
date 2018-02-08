@@ -4,27 +4,15 @@
 #include "list_container.h"
 #include "strategy.h"
 #include "decorator.h"
-<<<<<<< HEAD
 
-using namespace std;
-
-int main() {
-    op* op1 = new op(5);
-    op* op2 = new op(2);
-    op* op3 = new op(4);
-    op* op4 = new op(6);
-    op* op5 = new op(5.3);
-    op* op6 = new op(6.8);
-    
-=======
-using namespace std;
 
 int main() {
     op* op1 = new op(5.5);
     op* op2 = new op(-2.3);
     op* op3 = new op(4.1);
     op* op4 = new op(6.6);
->>>>>>> 3b1f35a98ef2e1883e871e0f5fd687af5b2538d0
+    op* op5 = new op(5.3);
+    op* op6 = new op(6.8);
     multiply* A = new multiply(op1, op2);
     subtract* B = new subtract(op3, op4);
     add* C = new add(A, B);
