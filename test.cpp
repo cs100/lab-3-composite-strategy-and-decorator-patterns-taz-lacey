@@ -42,6 +42,7 @@ int main() {
     v_container->add_element(C);
     v_container->add_element(D);
     
+    cout << "Values: ";
     v_container->print();
     Floor* f = new Floor(B);
     cout << "B (floor) is: " << f->evaluate() << endl;
@@ -50,6 +51,8 @@ int main() {
     Abs* a = new Abs(A);
     cout << "A (abs) is: " << a->evaluate() << endl;
     
+    cout << endl;
+    cout << "SORTING TESTING" << endl;
     
     cout << "Vector Container Before Sort: " << endl;
     v_container->print();
