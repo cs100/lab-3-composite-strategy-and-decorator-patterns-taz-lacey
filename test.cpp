@@ -16,15 +16,40 @@ int main() {
     add* C = new add(A, B);
     square* D = new square(C);
 
-    vector_container* container = new vector_container();
-    //list_container* container = new list_container();
-    container->add_element(A);
-    container->add_element(B);
-    container->add_element(D);
-    cout << "Container Before Sort: " << endl;
-    container->print();
-    container->set_sort_function(new BubbleSort());
-    container->sort();	
-    cout << "Container After Sort: " << endl;
-    container->print();
+    vector_container* v_container = new vector_container();
+    list_container* l_container = new list_container();
+    v_container->add_element(A);
+    v_container->add_element(B);
+    v_container->add_element(C);
+    v_container->add_element(D);
+    
+    cout << "Vector Container Before Sort: " << endl;
+    v_container->print();
+    
+//Bubble Sort
+    //v_container->set_sort_function(new BubbleSort());
+//selection sort
+    v_container->set_sort_function(new SelectionSort());
+    
+    v_container->sort();
+    cout << "Vector Container After Sort: " << endl;
+    v_container->print();
+    
+    
+    l_container->add_element(A);
+    l_container->add_element(B);
+    l_container->add_element(C);
+    l_container->add_element(D);
+    cout << "List Container Before Sort: " << endl;
+    l_container->print();
+    
+    //Bubble Sort
+    l_container->set_sort_function(new BubbleSort());
+    //Selection Sort
+    //l_container->set_sort_function(new SelectionSort());
+    
+    l_container->sort();	
+    cout << "List Container After Sort: " << endl;
+    l_container->print();
+    
 };

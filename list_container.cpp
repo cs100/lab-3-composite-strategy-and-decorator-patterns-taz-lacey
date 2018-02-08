@@ -16,7 +16,10 @@ void list_container::print() {
 }
 
 void list_container::sort() {
-    
+    if (sort_function == NULL) {
+        throw "Sort_Function is NULL!";
+    }
+    sort_function->sort(this);
 }
 
 void list_container::swap(int i, int j) {
@@ -28,7 +31,7 @@ void list_container::swap(int i, int j) {
     for (int y = 0; y < j; ++y) {
         ++it2;
     }
-    Base* temp = *it1;
+    Base* temp = *it2;
     *it2 = *it1;
     *it1 = temp;
 }
