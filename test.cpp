@@ -3,14 +3,14 @@
 #include "vector_container.h"
 #include "list_container.h"
 #include "strategy.h"
-
+#include "decorator.h"
 using namespace std;
 
 int main() {
-    op* op1 = new op(5);
-    op* op2 = new op(2);
-    op* op3 = new op(4);
-    op* op4 = new op(6);
+    op* op1 = new op(5.5);
+    op* op2 = new op(-2.3);
+    op* op3 = new op(4.1);
+    op* op4 = new op(6.6);
     multiply* A = new multiply(op1, op2);
     subtract* B = new subtract(op3, op4);
     add* C = new add(A, B);
@@ -23,33 +23,42 @@ int main() {
     v_container->add_element(C);
     v_container->add_element(D);
     
-    cout << "Vector Container Before Sort: " << endl;
     v_container->print();
-    
-//Bubble Sort
-    //v_container->set_sort_function(new BubbleSort());
-//selection sort
-    v_container->set_sort_function(new SelectionSort());
-    
-    v_container->sort();
-    cout << "Vector Container After Sort: " << endl;
-    v_container->print();
+    Floor* f = new Floor(B);
+    cout << "B is: " << f->evaluate() << endl;
+    Ceil* c = new Ceil (C);
+    cout << "C is: " << c->evaluate() << endl;
+    Abs* a = new Abs(A);
+    cout << "A is: " << a->evaluate() << endl;
     
     
-    l_container->add_element(A);
-    l_container->add_element(B);
-    l_container->add_element(C);
-    l_container->add_element(D);
-    cout << "List Container Before Sort: " << endl;
-    l_container->print();
+//     cout << "Vector Container Before Sort: " << endl;
+//     v_container->print();
     
-//Bubble Sort
-    //l_container->set_sort_function(new BubbleSort());
-//Selection Sort
-    l_container->set_sort_function(new SelectionSort());
+// //Bubble Sort
+//     //v_container->set_sort_function(new BubbleSort());
+// //selection sort
+//     v_container->set_sort_function(new SelectionSort());
     
-    l_container->sort();	
-    cout << "List Container After Sort: " << endl;
-    l_container->print();
+//     v_container->sort();
+//     cout << "Vector Container After Sort: " << endl;
+//     v_container->print();
+    
+    
+    // l_container->add_element(A);
+    // l_container->add_element(B);
+    // l_container->add_element(C);
+    // l_container->add_element(D);
+    // cout << "List Container Before Sort: " << endl;
+    // l_container->print();
+    
+// //Bubble Sort
+//     //l_container->set_sort_function(new BubbleSort());
+// //Selection Sort
+//     l_container->set_sort_function(new SelectionSort());
+    
+//     l_container->sort();	
+//     cout << "List Container After Sort: " << endl;
+//     l_container->print();
     
 };
