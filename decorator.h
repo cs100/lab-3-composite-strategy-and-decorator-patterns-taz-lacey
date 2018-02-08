@@ -42,15 +42,15 @@ class Floor : public Decorator{
 class Abs : public Decorator{
     protected:
         Base* decorated;
-        
     public:
-    Abs(Base* decorated){
+    Abs(Base* decorated) {
         this->decorated = decorated;
     }
-    
     double evaluate() {
         return abs(decorated->evaluate());
     }
 };
+
+
 
 #endif //__DECORATOR_H__
