@@ -28,17 +28,9 @@ void vector_container::sort() {
 }
 
 void vector_container::swap(int i, int j) {
-    // cout << "Before Swap: " << endl;
-    // cout << "i is:" << vector_values.at(i)->evaluate() << endl;
-    // cout << "j is:" << vector_values.at(j)->evaluate() << endl;
-    
     Base* temp = vector_values.at(i);
     vector_values.at(i) = vector_values.at(j);
     vector_values.at(j) = temp;
-    
-    // cout << "Post swap:" << endl;
-    // cout << "i is:" << vector_values.at(i)->evaluate() << endl;
-    // cout << "j is:" << vector_values.at(j)->evaluate() << endl;
 }
 
 Base* vector_container::at(int i) {

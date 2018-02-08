@@ -43,10 +43,10 @@ int main() {
     cout << "List Container Before Sort: " << endl;
     l_container->print();
     
-    //Bubble Sort
-    l_container->set_sort_function(new BubbleSort());
-    //Selection Sort
-    //l_container->set_sort_function(new SelectionSort());
+//Bubble Sort
+    //l_container->set_sort_function(new BubbleSort());
+//Selection Sort
+    l_container->set_sort_function(new SelectionSort());
     
     l_container->sort();	
     cout << "List Container After Sort: " << endl;
